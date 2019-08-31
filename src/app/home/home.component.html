@@ -1,0 +1,114 @@
+<br /><br>
+  <div class="container">
+
+
+      <h1 class="text-success">Famille Starks</h1>
+
+                <!--Boucle-->
+                <div class="click-perso" *ngFor="let stark of starks">
+                <span (click)="selected(stark)" [class.selected]="stark === selectedPerso">
+                  <!--Au click Objet dans le .ts + valeur et si la classe selected(stark) est egale a selected perso on ajoute une classe -->
+                  {{stark.id}}
+                  <br>
+                  {{stark.name}}
+                </span>
+                </div>
+
+      <hr>
+
+    <h1 class="text-success">Famille Starks</h1>
+    <!--Boucle-->
+    <div class="click-perso" *ngFor="let lanister of lanisters">
+                <span (click)="selected(lanister )" [class.selected]="lanister  === selectedPerso">
+                  <!--Au click Objet dans le .ts + valeur et si la classe selected(stark) est egale a selected perso on ajoute une classe -->
+                  {{lanister.id}}
+                  <br>
+                  {{lanister.name}}
+                </span>
+    </div>
+    <hr>
+    <!--Boucle-->
+    <div class="click-perso" *ngFor="let bara of baratheon">
+                <span (click)="selected(bara )" [class.selected]="bara   === selectedPerso">
+                  <!--Au click Objet dans le .ts + valeur et si la classe selected(stark) est egale a selected perso on ajoute une classe -->
+                  {{bara.id}}
+                  <br>
+                  {{bara.name}}
+                </span>
+    </div>
+<hr>
+    <!--Boucle-->
+    <div class="click-perso" *ngFor="let tar of targaryen">
+                <span (click)="selected(tar)" [class.selected]="tar   === selectedPerso">
+                  <!--Au click Objet dans le .ts + valeur et si la classe selected(stark) est egale a selected perso on ajoute une classe -->
+                  {{tar.id}}
+                  <br>
+                  {{tar.name}}
+                </span>
+    </div>
+  </div>
+
+  <!--Condition du click on ajoute un formulaire de modif-->
+  <div class="" *ngIf="selectedPerso">
+    <div class="form-group">
+      <label>Nom :</label>
+      <input [(ngModel)]="selectedPerso.name" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Age :</label>
+      <input [(ngModel)]="selectedPerso.age" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>En vie :</label>
+      <input [(ngModel)]="selectedPerso.enVie" class="form-control"/>
+    </div>
+  </div>
+
+  <h1 class="text-info text-center">ANGULAR 8</h1>
+  <h2 class="text-center text-success">Top des ventes</h2>
+
+  <a class="btn btn-outline-info" routerLink="/outils" routerLinkActive="active-link">Outils</a>
+
+
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card" style="width:100%; height: 700px">
+          <img alt="..." class="card-img-top" src="../../assets/img/famicom.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Famicom Japon</h5>
+            <p class="card-text">La famicom japon + son lecteur de disquette</p>
+            <h4 class="text-danger"><b>PRIX : 2560 €</b></h4>
+            <a class="btn btn-outline-primary" href="#">Détails</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 700px">
+          <img alt="..." class="card-img-top" src="../../assets/img/famicom2.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Famicom Japon Spécial Édition</h5>
+            <p class="card-text">La famicom japon + son lecteur de disquette édition limitée</p>
+            <h4 class="text-danger"><b>PRIX : 4620 €</b></h4>
+            <a class="btn btn-outline-danger" href="#">Détails</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 100%; height: 700px">
+          <img alt="..." class="card-img-top" src="../../assets/img/pcengine.jpg">
+          <div class="card-body">
+            <h5 class="card-title">PC Engine USA</h5>
+            <p class="card-text">Pc engine version USA Classique et sa manette</p>
+            <h4 class="text-danger"><b>PRIX : 12 540 €</b></h4>
+            <a class="btn btn-outline-info" href="#">Détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

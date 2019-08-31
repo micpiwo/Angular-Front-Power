@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+$color-blue:#548458;
+html{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  margin: 20px;
+  background-color: #721c24;
+  color: #fff;
+}
+
+.click-perso{
+  height: 80px;
+  background-color: $color-blue;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 20px;
+  width: 80px;
+  text-align: center;
+  border: solid 2px #ffffff;
+  display: inline-block;
+  &:hover{
+    cursor: pointer;
+  }
+}
